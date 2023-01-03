@@ -5,7 +5,9 @@ app.use(cors())
 
 app.use(express.json())
 
-app.use("/api/pilots")
+
+const pilotsController = require("./Controllers/pilotsController")
+app.use("/api/pilots",pilotsController )
 
 
 app.listen(8000, () => {
