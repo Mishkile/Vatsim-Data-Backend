@@ -34,7 +34,9 @@ router.get("/callsign/:callsign", async  (req,res) => {
 
 router.get("/cid/:cid", async (req,res) => {
     try {
-        const data = await BL.getPilotByCID(req.params.cid);
+        
+        const data = await BL.getPilotByCID(+req.params.cid);
+       
         res.json(data);
     } catch (error) {
         res.status(500).send(error.message);
