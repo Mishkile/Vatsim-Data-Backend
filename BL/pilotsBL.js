@@ -25,6 +25,8 @@ const getPilotByCID = async (cid) => {
     return data.pilots.find(pilot => pilot.cid === cid);
 }
 
+
+
 module.exports = {
     getAllPilots,
     getPilotsWithFlightPlan,
